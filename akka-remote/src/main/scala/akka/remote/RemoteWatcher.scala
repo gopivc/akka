@@ -80,7 +80,7 @@ private[akka] object RemoteWatcher {
  * to the peer actor on the other node, which replies with [[RemoteWatcher.HeartbeatRsp]]
  * message back. The failure detector on the watching side monitors these heartbeat messages.
  * If arrival of hearbeat messages stops it will be detected and this actor will publish
- * [[akka.event.AddressTerminated]] to the [[akka.event.AddressTerminatedTopic]].
+ * [[akka.actor.AddressTerminated]] to the [[akka.event.AddressTerminatedTopic]].
  *
  * When all actors on a node have been unwatched it will stop sending heartbeat messages.
  *

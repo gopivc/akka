@@ -11,7 +11,7 @@ import akka.actor.Address
 import akka.actor.Props
 import akka.testkit._
 
-object AddressTermiantedTopicBenchSpec {
+object AddressTerminatedTopicBenchSpec {
 
   class Subscriber(testActor: ActorRef) extends Actor {
     AddressTerminatedTopic(context.system).subscribe(self)
@@ -26,8 +26,8 @@ object AddressTermiantedTopicBenchSpec {
 }
 
 @org.junit.runner.RunWith(classOf[org.scalatest.junit.JUnitRunner])
-class AddressTermiantedTopicBenchSpec extends AkkaSpec("akka.loglevel=INFO") {
-  import AddressTermiantedTopicBenchSpec._
+class AddressTerminatedTopicBenchSpec extends AkkaSpec("akka.loglevel=INFO") {
+  import AddressTerminatedTopicBenchSpec._
 
   "Subscribe and unsubscribe of AddressTerminated" must {
 

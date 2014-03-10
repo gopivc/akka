@@ -35,7 +35,7 @@ private[akka] object AddressTerminatedTopic extends ExtensionId[AddressTerminate
  */
 private[akka] final class AddressTerminatedTopic extends Extension {
 
-  private var subscribers = new AtomicReference[Set[ActorRef]](Set.empty[ActorRef])
+  private val subscribers = new AtomicReference[Set[ActorRef]](Set.empty[ActorRef])
 
   @tailrec def subscribe(subscriber: ActorRef): Unit = {
     val current = subscribers.get
